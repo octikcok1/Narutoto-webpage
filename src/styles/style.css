@@ -1,0 +1,128 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  display: block;
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: block;
+  place-items: center;
+  background-color: #262626;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border: 1px solid #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+  border-radius: 30px;
+  border: 3px solid rgb(0, 149, 255);
+  background-color: #1a1a1a;
+  width: 70svw;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+}
+
+#app {
+  display: flex;
+  height: 100svh;
+  width: 100svw;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(8, 8, 8);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* 隱藏原生滾動條 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* WebKit瀏覽器（如Chrome和Safari）的滾動條 */
+::-webkit-scrollbar {
+  width: 10px; /* 滾動條的寬度 */
+}
+
+/* 自定義滾動條的軌道 */
+::-webkit-scrollbar-track {
+  background: #707070; /* 將軌道顏色設置為灰色 */
+}
+
+/* 自定義滾動條的滾動軌跡 */
+::-webkit-scrollbar-thumb {
+  background: #888; /* 滾動條的顏色 */
+  border-radius: 5px; /* 圓角 */
+}
+
+/* 鼠標懸停在滾動條上時的樣式 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* 滾動條的顏色 */
+}
+
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

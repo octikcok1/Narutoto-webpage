@@ -1,0 +1,199 @@
+.image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 12svh;
+    max-height: 12svh;
+    width: 100svw;
+    background: #1b1b1b;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: left;
+    height: 9svh;
+    width: 9svh;
+    padding: 2px;
+    will-change: filter;
+    border: 2px solid blue;
+    border-radius: 50%;
+    transition: filter 200ms;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    /* 让图像填满容器 */
+    height: auto;
+    /* 根据宽度自动调整高度 */
+    display: block;
+    /* 防止底部间隙 */
+    border-radius: 50%;
+    /* 将图像剪裁为圆形 */
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #ffffffaa);
+}
+
+.menu {
+    position: fixed;
+    align-items: center;
+    right: 1svw;
+}
+
+.menu a {
+    margin-left: 1%;
+    text-decoration: none;
+    color: #00bfff;
+}
+
+.menu a:hover {
+    color: #67e763;
+}
+
+.list {
+    position: absolute;
+    top: 12svh;
+    height: 88svh;
+    width: 15svw;
+    right: 0;
+    display: block;
+    background-color: rgb(30, 30, 30);
+    padding: 1em;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease forwards;
+}
+
+.list a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid rgb(255, 102, 0, 0.5);
+    border-radius: 30px;
+}
+
+.list a:hover {
+    color: #67e763;
+    background-color: #212121;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(15svw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .list {
+        width: 50svw;
+    }
+
+    @keyframes fadeIn {
+        from {
+            transform: translateX(50svw);
+        }
+    
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@font-face {
+    font-family: 'title';
+    src: url('./Fonts/Caveat-VariableFont_wght.ttf')
+}
+
+.title-text {
+    font-family: 'title';
+    text-align: center;
+    margin-left: 0.5%;
+    font-size: 225%;
+    color: #ffffff;
+}
+
+.title-text a:hover {
+    color: #00fff2;
+}
+
+.announcement {
+    background-color: rgba(0, 98, 255, 0.5);
+    padding: 1svh;
+    text-align: center;
+    position: fixed;
+    top: 15svh;
+    left: 1.7svw;
+    width: 95svw;
+    border-radius: 15px;
+    animation: announcementIn 2s ease forwards, announcementOut 2s ease forwards 7s;
+    z-index: 9999;
+}
+
+@keyframes announcementIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes announcementOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20em);
+    }
+}
+
+.main {
+    position: absolute;
+    top: 100svh;
+    height: 180svh;
+    width: 100svw;
+    overflow: hidden;
+    background-color: rgb(50, 50, 50);
+}
+
+.foooter {
+    position: absolute;
+    top: 240svh;
+}
+
+@keyframes fade-in-up-animation {
+    from {
+        opacity: 0;
+        transform: translateY(10em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.character-card {
+    background-color: #212121;
+}
